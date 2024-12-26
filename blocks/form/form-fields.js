@@ -1,5 +1,5 @@
 import { toClassName } from '../../scripts/aem.js';
-
+console.log("form fields");
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');
   if (fd.Style) fieldWrapper.className = fd.Style;
@@ -234,3 +234,7 @@ export default async function createField(fd, form) {
 
   return fieldElements.fieldWrapper;
 }
+
+
+
+
