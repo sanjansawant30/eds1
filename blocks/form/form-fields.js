@@ -1,5 +1,5 @@
 import { toClassName } from '../../scripts/aem.js';
-console.log("form");
+
 function createFieldWrapper(fd) {
   const fieldWrapper = document.createElement('div');
   if (fd.Style) fieldWrapper.className = fd.Style;
@@ -193,7 +193,7 @@ const createToggle = (fd) => {
   slider.addEventListener('click', () => {
     field.checked = !field.checked;
   });
-  
+
   return { field, fieldWrapper };
 };
 
@@ -201,6 +201,7 @@ const createCheckbox = (fd) => {
   const { field, fieldWrapper } = createInput(fd);
   if (!field.value) field.value = 'checked';
   fieldWrapper.classList.add('selection-wrapper');
+
   return { field, fieldWrapper };
 };
 
@@ -208,6 +209,7 @@ const createRadio = (fd) => {
   const { field, fieldWrapper } = createInput(fd);
   if (!field.value) field.value = fd.Label || 'on';
   fieldWrapper.classList.add('selection-wrapper');
+
   return { field, fieldWrapper };
 };
 
@@ -232,7 +234,3 @@ export default async function createField(fd, form) {
 
   return fieldElements.fieldWrapper;
 }
-
-
-
-
