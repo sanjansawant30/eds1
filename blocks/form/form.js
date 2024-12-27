@@ -203,7 +203,6 @@ function createButton(fd,formURL) {
         button.setAttribute('disabled', '');
         await getServices(fd,formURL,form);
         //await submitForm(form);
-
         //const redirectTo = fd.Extra;
         //window.location.href = redirectTo;
       }
@@ -357,7 +356,7 @@ async function createForm(formURL) {
 export default async function decorate(block) {
   //console.log("====BLOCK=====> {} ",block);
   const form = block.querySelector('a[href$=".json"]');
-  //console.log("====JSON URL=====> {} ",form);
+  console.log("====JSON URL=====> {} ",form);
   addInViewAnimationToSingleElement(block, 'fade-up');
   if (form) {
     form.replaceWith(await createForm(form.href));
