@@ -4,7 +4,7 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 
 
 
-export default function decorate(block) {
+export default async function decorate(block) {
   /* change to ul, li */
 
   const getData = async () => {
@@ -13,7 +13,7 @@ export default function decorate(block) {
     const data = await response.json();
     return data;
   }
-  const products = getData();
+  const products = await getData();
   console.log(products);
 
 
