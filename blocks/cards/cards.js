@@ -7,14 +7,24 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default async function decorate(block) {
   /* change to ul, li */
 
-  const getData = async () => {
+  // const getData = async () => {
 
-    const response = await fetch("https://fakestoreapi.com/products");
-    const data = await response.json();
-    return data;
-  }
-  const products = await getData();
-  console.log(products);
+  //   const response = await fetch("https://fakestoreapi.com/products");
+  //   const data = await response.json();
+  //   return data;
+  // }
+  // const products = await getData();
+  // console.log(products);
+
+  // // const dul = document.createElement('ul');
+  // // dul.className = "container";
+  // // products.forEach(row =>{
+  // //   const li = document.createElement('li');
+  // //   li.className = "card";
+
+  // // })
+
+
 
 
 
